@@ -30,5 +30,6 @@ llm=ChatOpenAI(model="gpt-3.5-turbo")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
+
 if input_text:
     st.write(chain.invoke({'question':input_text}))
